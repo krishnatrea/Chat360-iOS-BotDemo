@@ -6,9 +6,10 @@
 //
 
 import SwiftUI
+import chat360_iosSdk
 
 @main
-struct DemoAppApp: App {
+struct DemoApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()

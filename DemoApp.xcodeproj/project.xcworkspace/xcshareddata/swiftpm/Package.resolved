@@ -1,0 +1,15 @@
+{
+  "originHash" : "210c044e43ca6ee8c07f438a57677df2a35b9b0db8da3869988e8ca05f57cd0a",
+  "pins" : [
+    {
+      "identity" : "chat360-ios-sdk",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/sumanel/chat360-ios-sdk.git",
+      "state" : {
+        "revision" : "bd0afffef47815cf482fb9cb890e94ad087595f7",
+        "version" : "2.0.1"
+      }
+    }
+  ],
+  "version" : 3
+}
