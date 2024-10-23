@@ -6,8 +6,8 @@
 //
 
 import SwiftUI
-import chat360_iosSdk
 
+@available(iOS 14.0, *)
 @main
 struct DemoApp: App {
     var body: some Scene {

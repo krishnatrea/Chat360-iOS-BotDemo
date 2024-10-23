@@ -20,6 +20,8 @@ struct FormScreen: View {
     @State private var errorMessage: String? = nil
 
      var body: some View {
+         ScrollView {
+            
          VStack(spacing: 20) {
              Text("Chat360 Bot Demo")
                  .font(.largeTitle)
@@ -160,6 +162,7 @@ struct FormScreen: View {
          .shadow(color: Color.black.opacity(0.2), radius: 5, x: 0, y: 2)
          .padding()
      }
+    }
     
     func extractData(from url: String) {
             guard let components = URLComponents(string: url),
@@ -168,18 +171,28 @@ struct FormScreen: View {
                 return
             }
 
-            for queryItem in queryItems {
-                if queryItem.name == "h" {
-                    botId = queryItem.value ?? ""
-                } else if queryItem.name == "appId" {
-                    appId = queryItem.value ?? ""
-                } else {
-                    // Handle meta data
-                    if let value = queryItem.value {
-                        metaEntries.append((key: queryItem.name, value: value))
+        for queryItem in queryItems {
+            switch queryItem.name {
+            case "h":
+                botId = queryItem.value ?? ""
+            case "appId":
+                appId = queryItem.value ?? ""
+            case "meta":
+                // Handle meta data
+                if let value = queryItem.value, let jsonData = value.data(using: .utf8) {
+                    do {
+                        // Decode the JSON string into a dictionary
+                        let jsonEntries = try JSONDecoder().decode([String: String].self, from: jsonData)
+                        // If you want to store entries in metaEntries
+                        metaEntries.append(contentsOf: jsonEntries.map { ($0.key, $0.value) })
+                    } catch {
+                        print("Failed to decode JSON: \(error)")
                     }
                 }
+            default:
+                break
             }
+        }
             // Clear error message if extraction is successful
             errorMessage = nil
         }
