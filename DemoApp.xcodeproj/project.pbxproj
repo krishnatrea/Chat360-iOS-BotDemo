@@ -3,11 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4565CFAC2CB9239B00BF62AA /* Chat360Sdk in Frameworks */ = {isa = PBXBuildFile; productRef = 4565CFAB2CB9239B00BF62AA /* Chat360Sdk */; };
+		45EEE4552D12A9000070989E /* Chat360Sdk in Frameworks */ = {isa = PBXBuildFile; productRef = 45EEE4542D12A9000070989E /* Chat360Sdk */; };
 		45F415052CB8EAAB00722B3F /* DemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F415042CB8EAAB00722B3F /* DemoApp.swift */; };
 		45F415072CB8EAAB00722B3F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F415062CB8EAAB00722B3F /* ContentView.swift */; };
 		45F415092CB8EAAC00722B3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45F415082CB8EAAC00722B3F /* Assets.xcassets */; };
@@ -29,7 +29,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4565CFAC2CB9239B00BF62AA /* Chat360Sdk in Frameworks */,
+				45EEE4552D12A9000070989E /* Chat360Sdk in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,7 +105,7 @@
 			);
 			name = DemoApp;
 			packageProductDependencies = (
-				4565CFAB2CB9239B00BF62AA /* Chat360Sdk */,
+				45EEE4542D12A9000070989E /* Chat360Sdk */,
 			);
 			productName = DemoApp;
 			productReference = 45F415012CB8EAAB00722B3F /* DemoApp.app */;
@@ -136,7 +136,7 @@
 			);
 			mainGroup = 45F414F82CB8EAAB00722B3F;
 			packageReferences = (
-				4565CFA72CB9108600BF62AA /* XCRemoteSwiftPackageReference "chat360-ios-sdk" */,
+				45EEE4532D12A9000070989E /* XCLocalSwiftPackageReference "../chat360-ios-sdk" */,
 			);
 			productRefGroup = 45F415022CB8EAAB00722B3F /* Products */;
 			projectDirPath = "";
@@ -377,21 +377,16 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCRemoteSwiftPackageReference section */
-		4565CFA72CB9108600BF62AA /* XCRemoteSwiftPackageReference "chat360-ios-sdk" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/sumanel/chat360-ios-sdk.git";
-			requirement = {
-				kind = exactVersion;
-				version = 2.0.1;
-			};
+/* Begin XCLocalSwiftPackageReference section */
+		45EEE4532D12A9000070989E /* XCLocalSwiftPackageReference "../chat360-ios-sdk" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = "../chat360-ios-sdk";
 		};
-/* End XCRemoteSwiftPackageReference section */
+/* End XCLocalSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		4565CFAB2CB9239B00BF62AA /* Chat360Sdk */ = {
+		45EEE4542D12A9000070989E /* Chat360Sdk */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 4565CFA72CB9108600BF62AA /* XCRemoteSwiftPackageReference "chat360-ios-sdk" */;
 			productName = Chat360Sdk;
 		};
 /* End XCSwiftPackageProductDependency section */

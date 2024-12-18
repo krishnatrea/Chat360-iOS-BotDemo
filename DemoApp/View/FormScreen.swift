@@ -138,7 +138,13 @@ struct FormScreen: View {
 
 
              Button(action: {
-                 showBottomSheet.toggle()
+                 do {
+                     let config = Chat360Config(botId: botId, appId: appId, meta: Dictionary(uniqueKeysWithValues: metaEntries))
+                     Chat360Bot.shared.setConfig(chat360Config: config)
+                     try Chat360Bot.shared.startChatbot(animated: true)
+                 } catch {
+                     print("Failed to Load");
+                 }
              }) {
                  Text("Launch Bot")
                      .font(.headline)
@@ -149,12 +155,7 @@ struct FormScreen: View {
                      .cornerRadius(8)
              }
              .padding(.top, 20)
-             .sheet(isPresented: $showBottomSheet) {
-                 // Create the config and present the Chat360BotView
-                 let config = Chat360Config(botId: botId, appId: appId, meta: Dictionary(uniqueKeysWithValues: metaEntries))
-                 Chat360BotView(botConfig: config)
-                     .background(Color.black)
-             }
+            
          }
          .padding()
          .background(Color(UIColor.systemGroupedBackground))
@@ -193,7 +194,6 @@ struct FormScreen: View {
                 break
             }
         }
-            // Clear error message if extraction is successful
             errorMessage = nil
         }
 }
