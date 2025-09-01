@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		45EEE4552D12A9000070989E /* Chat360Sdk in Frameworks */ = {isa = PBXBuildFile; productRef = 45EEE4542D12A9000070989E /* Chat360Sdk */; };
 		45F415052CB8EAAB00722B3F /* DemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F415042CB8EAAB00722B3F /* DemoApp.swift */; };
 		45F415072CB8EAAB00722B3F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F415062CB8EAAB00722B3F /* ContentView.swift */; };
 		45F415092CB8EAAC00722B3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45F415082CB8EAAC00722B3F /* Assets.xcassets */; };
 		45F4150C2CB8EAAC00722B3F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45F4150B2CB8EAAC00722B3F /* Preview Assets.xcassets */; };
 		45F6CB702CC76DE7001FD37A /* FormScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F6CB6F2CC76DE7001FD37A /* FormScreen.swift */; };
+		482D3F282E64C3A100551801 /* Chat360SDK in Frameworks */ = {isa = PBXBuildFile; productRef = 482D3F272E64C3A100551801 /* Chat360SDK */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +29,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				45EEE4552D12A9000070989E /* Chat360Sdk in Frameworks */,
+				482D3F282E64C3A100551801 /* Chat360SDK in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,7 +105,7 @@
 			);
 			name = DemoApp;
 			packageProductDependencies = (
-				45EEE4542D12A9000070989E /* Chat360Sdk */,
+				482D3F272E64C3A100551801 /* Chat360SDK */,
 			);
 			productName = DemoApp;
 			productReference = 45F415012CB8EAAB00722B3F /* DemoApp.app */;
@@ -136,7 +136,7 @@
 			);
 			mainGroup = 45F414F82CB8EAAB00722B3F;
 			packageReferences = (
-				45EEE4532D12A9000070989E /* XCLocalSwiftPackageReference "../chat360-ios-sdk" */,
+				482D3F242E64C28500551801 /* XCLocalSwiftPackageReference "../chat360-ios-sdk" */,
 			);
 			productRefGroup = 45F415022CB8EAAB00722B3F /* Products */;
 			projectDirPath = "";
@@ -378,16 +378,17 @@
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
-		45EEE4532D12A9000070989E /* XCLocalSwiftPackageReference "../chat360-ios-sdk" */ = {
+		482D3F242E64C28500551801 /* XCLocalSwiftPackageReference "../chat360-ios-sdk" */ = {
 			isa = XCLocalSwiftPackageReference;
 			relativePath = "../chat360-ios-sdk";
 		};
 /* End XCLocalSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		45EEE4542D12A9000070989E /* Chat360Sdk */ = {
+		482D3F272E64C3A100551801 /* Chat360SDK */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = Chat360Sdk;
+			package = 482D3F242E64C28500551801 /* XCLocalSwiftPackageReference "../chat360-ios-sdk" */;
+			productName = Chat360SDK;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
