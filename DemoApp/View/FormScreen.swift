@@ -120,15 +120,15 @@ struct FormScreen: View {
                     let config = Chat360Config(
                         botId: botId,
                         appId: appId,
-                        isDebug: true,
-                        meta: Dictionary(uniqueKeysWithValues: metaEntries)
+                        meta: Dictionary(uniqueKeysWithValues: metaEntries),
+                        useNewUI: false
                     )
+                    Chat360Bot.shared.setBaseUrl(url: "https://staging.chat360.io")
                     Chat360Bot.shared.setConfig(chat360Config: config)
 
-                    // Provide dynamic metadata to webview
-                    Chat360Bot.shared.metadataProvider = {
+                    Chat360Bot.shared.handleWindowEvents = { map in
+                        print(map)
                         var metaDict = Dictionary(uniqueKeysWithValues: metaEntries)
-                        // Add any dynamic values here
                         metaDict["dynamic_time"] = "\(Date())"
                         return metaDict
                     }
